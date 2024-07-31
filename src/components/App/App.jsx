@@ -36,7 +36,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
       try {
         setIsLoading(true);
         setIsError(false);
-        const response = await fetchPhotos(query, page, 5);
+        const response = await fetchPhotos(query, page, 10);
         setResults((prev) => [...prev, ...response.results]);
         setTotal(response.total_pages);
       } catch (error) {
